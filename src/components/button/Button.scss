@@ -1,0 +1,18 @@
+.button {
+  display: block;
+  border-radius: 100px;
+  width: 194px;
+  height: 52px;
+  background-color: brown;
+  text-align: center;
+  line-height: 52px;
+  padding: 0;
+  color:black;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.1s;
+  font-family: 'MuseoModerno';
+}
+.button:hover {
+  box-shadow: 5px 4px 3px black;
+}

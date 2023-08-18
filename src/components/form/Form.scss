@@ -1,0 +1,70 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:auto;
+  button {
+    margin:0 auto;
+  }
+}
+.sectionForm {
+  label {
+    font-family: 'MuseoModerno';
+  }
+  input,
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  input:-webkit-autofill::after  {
+    font-family: 'MuseoModerno';
+    display:block;
+    background: none;
+    width:22rem;
+    height: 2rem;
+    border-bottom: 1px solid black;
+    -webkit-border-before: none;
+    -webkit-border-end: none;
+    -webkit-border-start: none;
+    transition: background-color 5000s ease-in-out 0s;
+    padding: 0.5rem;
+    margin:auto;
+    margin-bottom:1rem;
+  }
+  textarea {
+    width: 25rem;
+    height:13rem;
+    max-width: 25rem;
+    max-height: 13rem;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin: 2rem 0;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sectionForm {
+    grid-row:2/3;
+    input,
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active,
+    input:-webkit-autofill::after  {
+      font-family: 'MuseoModerno';
+      display:block;
+      background: none;
+      width:18rem;
+      height: 1.5rem;
+      padding: 0.5rem;
+      margin:auto;
+      margin-bottom:1rem;
+    }
+    textarea {
+      width: 18rem;
+      height:4rem;
+      margin:1rem 0;
+      border-radius: 1.125rem;
+    }
+  }
+}
