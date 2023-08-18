@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  padding: 12px 96px 48px 96px;
+  width: 100%;
+  align-items: center;
+  z-index: 100;
+  img {
+    width: 8rem;
+    height: 6rem;
+  }
+}
+.links {
+  display: flex;
+  flex-direction: row;
+}
+.links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'MuseoModerno';
+  margin:0 38px;
+  transition: 0.1s;
+  font-size: 20px;
+}
+.links a:hover {
+  opacity: 1;
+  font-size: bold;
+  text-shadow: 1px 1px 1px rgb(94, 90, 90);
+}
+.menu {
+  display: none;
+}
+.logoMobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    font-size: 1rem;
+    padding: 4px 2px;
+    width: 30%;
+    height: fit-content;
+    content:none;
+    background-color: var(--green);
+    border-bottom: 1px solid black;
+    border-right: 2px solid black;
+    background-color: #C8F031;
+    img {
+      display: none;
+    }
+    border-bottom-right-radius: 1.625rem;
+  }
+  .links {
+    padding-top:4rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .links a {
+    align-self: center;
+    font-size: 1rem;
+    margin: 2px 0;
+  }
+  .hidden {
+    display: none;
+    border: none;
+  }
+  .menu {
+    display:block;
+    width: 24px;
+    position: fixed;
+    top: 2rem;
+    left: 3rem;
+    z-index: 1000;
+  }
+  .logoMobile {
+    display: block;
+    max-width: 6rem;
+    padding-right: 1rem;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
