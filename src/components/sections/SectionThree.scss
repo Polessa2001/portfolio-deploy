@@ -1,0 +1,248 @@
+.section-3-back {
+  width: 100%;
+}
+.section-3-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 48px;
+  padding-top: 6rem;
+  h2 {
+    margin-bottom: 0.5rem;
+    align-self: center;
+  }
+}
+.skills {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 80%; /* Equivalent to 80% in rem */
+  max-height:80%;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  width: 21rem; /* Equivalent to 30% in rem */
+  height: 13rem; /* Equivalent to 260px in rem */
+  position: relative;
+  border: 1px solid black;
+  border-radius: 1.5625rem; /* Equivalent to 25px in rem */
+  transition: 0.2s; /* Corrected comma to dot for transition time */
+  padding: 1rem;
+  img {
+    width:2.5rem;
+    position:absolute;
+    right:1rem;
+    bottom:1rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 4px;
+  }
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+.skill:hover {
+  box-shadow: 0.3125rem 0.25rem 0.0625rem black; /* Equivalent to 5px 4px 1px in rem */
+}
+
+/* The switch - the box around the slider */
+.switch {
+  align-self: center;
+  position: relative;
+  display: inline-block;
+  width: 2.5rem; /* Equivalent to 58px in rem */
+  height: 2.5rem; /* Equivalent to 48px in rem */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  background-color: #01CC65;
+  border: 1px solid black;
+  transition: 0.4s; /* Changed -webkit-transition to transition for better compatibility */
+  box-shadow: 0.0625rem 0.0625rem 0.0625rem black; /* Equivalent to 1px 1px 1px in rem */
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1rem; /* Equivalent to 20px in rem */
+    width: 1.1rem; /* Equivalent to 22px in rem */
+    left: 0.25rem; /* Equivalent to 4px in rem */
+    bottom: 0.20rem; /* Equivalent to 2px in rem */
+    background-color: white;
+    transition: 0.4s; /* Changed -webkit-transition to transition for better compatibility */
+  }
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0.0625rem #2196F3; /* Equivalent to 1px in rem */
+}
+
+input:checked + .slider:before {
+  transform: translateX(0.85rem); /* Equivalent to 26px in rem */
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 2.125rem; /* Equivalent to 34px in rem */
+  height: 1.5rem; /* Equivalent to 24px in rem */
+  &:before {
+    border-radius: 50%;
+  }
+}
+.switchContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  p {
+    margin-top: 0;
+    font-family: 'MuseoModerno';
+    font-style:oblique;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-3-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem;
+    padding-top: 6rem;
+    h2 {
+      margin-bottom: 0.5rem;
+      align-self: center;
+    }
+  }
+  .skills {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    max-height:100%;
+    max-width: 100%;
+  }
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    width: 10rem; /* Equivalent to 30% in rem */
+    height: 12rem; /* Equivalent to 260px in rem */
+    position: relative;
+    border: 1px solid black;
+    border-radius: 1.5625rem; /* Equivalent to 25px in rem */
+    transition: 0.2s; /* Corrected comma to dot for transition time */
+    padding: 0.5rem;
+    img {
+      width:2rem;
+      position:absolute;
+      right:0.5rem;
+      bottom:0.5rem;
+      border: 1px solid black;
+      border-radius: 50%;
+      padding: 4px;
+    }
+    h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin-top: 0;
+      font-size: 0.75rem;
+    }
+  }
+
+  .skill:hover {
+    box-shadow: 0.3125rem 0.25rem 0.0625rem black; /* Equivalent to 5px 4px 1px in rem */
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    align-self: center;
+    position: relative;
+    display: inline-block;
+    width: 2.5rem; /* Equivalent to 58px in rem */
+    height: 2.5rem; /* Equivalent to 48px in rem */
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    background-color: #ccc;
+    transition: 0.4s; /* Changed -webkit-transition to transition for better compatibility */
+    box-shadow: 0.0625rem 0.0625rem 0.0625rem black; /* Equivalent to 1px 1px 1px in rem */
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1rem; /* Equivalent to 20px in rem */
+      width: 1.1rem; /* Equivalent to 22px in rem */
+      left: 0.25rem; /* Equivalent to 4px in rem */
+      bottom: 0.25rem; /* Equivalent to 2px in rem */
+      background-color: white;
+      transition: 0.4s; /* Changed -webkit-transition to transition for better compatibility */
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 0.0625rem #2196F3; /* Equivalent to 1px in rem */
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(0.85rem); /* Equivalent to 26px in rem */
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 2.125rem; /* Equivalent to 34px in rem */
+    height: 1.5rem; /* Equivalent to 24px in rem */
+    &:before {
+      border-radius: 50%;
+    }
+  }
+}
