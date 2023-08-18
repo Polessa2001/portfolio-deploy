@@ -2,8 +2,8 @@ import React from 'react';
 import SectionOne from '../sections/SectionOne';
 import SectionTwo from '../sections/SectionTwo';
 import SectionThree from '../sections/SectionThree';
-// import SectionFour from '../sections/SectionFour';
-// import SectionFive from '../sections/SectionFive';
+import SectionFour from '../sections/SectionFour';
+import SectionFive from '../sections/SectionFive';
 import Navbar from '../navbar/Navbar';
 import { lightGreen } from '../../styles/colors';
 import './MainContent.scss';
@@ -21,14 +21,14 @@ const MainContent = () => {
       <section id="section-3">
         <SectionThree />
       </section>
+      <section id="section-4">
+        <SectionFour />
+      </section>
+      <section id="section-5"  style={{ backgroundColor: lightGreen }}>
+        <SectionFive />
+      </section>
     </div>
   )
 };
 
 export default MainContent;
-// <section id="section-4">
-//   <SectionFour />
-// </section>
-// <section id="section-5"  style={{ backgroundColor: lightGreen }}>
-//   <SectionFive />
-// </section>

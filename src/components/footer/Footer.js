@@ -8,9 +8,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="contact-links-footer">
-        <a href="https://www.linkedin.com/in/polinasokolovadev/"><img src ={linkedIn} /></a>
+        <a href="https://www.linkedin.com/in/polinasokolovadev/"><img src ={linkedIn} alt=""/></a>
         <a href="https://github.com/Polessa2001"><img src={gitHub} alt="" /></a>
-        <a href="https://troopl.com/polinasokolovadev"><img src = {portfolio} /></a>
+        <a href="https://troopl.com/polinasokolovadev"><img src = {portfolio} alt=""/></a>
       </div>
       <p>Copyright@ Polina Sokolova</p>
     </div>

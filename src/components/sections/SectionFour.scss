@@ -1,0 +1,91 @@
+.section-4-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  width:80%;
+  height:100%;
+  max-width:80%;
+  max-height:100%;
+  margin-top: 2rem;
+}
+
+.projectCard {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 1.3rem; /* Equivalent to 25px in rem */
+  transition: 0.2s; /* Corrected comma to dot for transition time */
+  justify-self: stretch;
+  position: relative;
+  p {
+    font-family: 'MuseoModerno';
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  a {
+    display: none;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.3rem;
+    z-index: 1;
+    pointer-events: none;
+    transition: background-color 0.2s; /* Add transition for opacity */
+  }
+}
+
+.projectCard:hover {
+  a {
+    display:block;
+    position:absolute;
+    justify-self: center;
+    align-self: center;
+    z-index: 20;
+    text-decoration: none;
+  }
+}
+
+.projectCard:hover::after {
+  background-color: rgb(0, 0, 0); /* Make the overlay disappear on hover */
+}
+
+.nextLink {
+  width:4rem;
+  height:4rem;
+  opacity: 1 !important;
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    display: block;
+    grid-gap: 0;
+  }
+  .projectCard {
+    margin: 1.25rem;
+    border-radius: 1rem; /* Equivalent to 20px in rem */
+    p {
+      transform: rotate(0deg) !important;
+      font-size: 1rem !important;
+      text-transform: capitalize !important;
+    }
+  }
+}

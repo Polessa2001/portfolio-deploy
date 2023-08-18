@@ -4,13 +4,16 @@ import './Form.scss';
 import emailjs from '@emailjs/browser';
 
 const Form = () => {
-  const form = React.useRef(null);
-
+  const form = useRef();
   const sendEmail = (e) => {
-    e.preventDefault(); // Prevent the default form submission
-    // Your Email.js code to send the email
+    e.preventDefault();
 
-    // For demonstration purposes, I'm using a fake success message
+    emailjs.sendForm('service_akbv4fk', 'template_wro0dwt', form.current, 'jKZY1uQt3vUNxoL0Z')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   };
 
   return (
