@@ -42,6 +42,19 @@
     padding: 2rem;
   }
 }
+.Toastify__toast-theme--light {
+  border: 2px solid black;
+  border-radius: 10px !important;
+}
+.Toastify__toast-body {
+  font-family: 'MuseoModerno';
+  text-align: center;
+  color:black;
+}
+.Toastify__progress-bar-theme--light {
+  border-top: 2px solid black;
+  background: #3463E5 !important;
+}
 @media screen and (max-width: 768px) {
   .sectionForm {
     grid-row:2/3;

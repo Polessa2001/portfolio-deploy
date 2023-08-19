@@ -5,7 +5,9 @@ import menu from '../../assets/menu.png';
 const Navbar = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(true);
   const showMenu = () => {
-    setIsMenuVisible(!isMenuVisible);
+    setTimeout(() => {
+      setIsMenuVisible(!isMenuVisible);
+    }, 1000);
   }
   return (
     <div>
