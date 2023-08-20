@@ -55,7 +55,7 @@
   border-top: 2px solid black;
   background: #3463E5 !important;
 }
-@media (max-device-width: 375px) and (max-device-height: 812px) {
+@media (max-width: 800px) {
   .sectionForm {
     grid-row:2/3;
     input,

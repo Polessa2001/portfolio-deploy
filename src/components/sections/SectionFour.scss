@@ -74,7 +74,7 @@
   padding: 2px;
   border: 2px solid #ffffff;
 }
-@media (max-device-width: 375px) and (max-device-height: 812px){
+@media (max-width: 800px){
   .projects {
     display: block;
     grid-gap: 0;

@@ -128,7 +128,7 @@ input:checked + .slider:before {
     font-style:oblique;
   }
 }
-@media (max-device-width: 375px) and (max-device-height: 812px) {
+@media (max-width: 800px) {
   .section-3-content {
     display: flex;
     flex-direction: column;

@@ -51,7 +51,7 @@
   border: 0.3rem solid black;
   opacity: 1 !important;
 }
-@media (max-device-width: 375px) and (max-device-height: 812px) {
+@media (max-width: 800px) {
   .section-2-content {
     justify-content: flex-start;
     height: 100%;
