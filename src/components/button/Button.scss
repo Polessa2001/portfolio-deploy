@@ -16,3 +16,8 @@
 .button:hover {
   box-shadow: 5px 4px 3px black;
 }
+@media screen and (max-width: 768px) {
+  .button {
+    border: 2px solid black;
+  }
+}
