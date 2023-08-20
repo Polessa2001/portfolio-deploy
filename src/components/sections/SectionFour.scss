@@ -75,9 +75,13 @@
   border: 2px solid #ffffff;
 }
 @media (max-width: 800px){
+  .section-4-content h2 {
+    margin-bottom: 0;
+  }
   .projects {
     display: block;
     grid-gap: 0;
+    margin-top: 0;
   }
   .projectCard {
     margin: 1.25rem;
