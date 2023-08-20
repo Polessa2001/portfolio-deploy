@@ -20,7 +20,8 @@ section {
 @media (max-width: 800px) {
   .container {
     height: 100svh;
-    width: 100vw;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
