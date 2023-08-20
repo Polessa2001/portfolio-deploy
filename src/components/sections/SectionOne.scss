@@ -34,9 +34,10 @@
     display: flex;
     flex-direction: column;
     max-height: 100%;
+    max-width: max-content;
     width:100%;
-    padding-top: 48px;
-    justify-content: flex-end;
+    // padding-top: 48px;
+    justify-content: flex-start;
     .section-1-content {
       text-align: center;
       display: flex;

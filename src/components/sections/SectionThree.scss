@@ -132,11 +132,12 @@ input:checked + .slider:before {
   .section-3-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: auto;
     padding: 1rem;
     padding-top: 6rem;
+    height: 100%;
     h2 {
       margin-bottom: 0.5rem;
       align-self: center;

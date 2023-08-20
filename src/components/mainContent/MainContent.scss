@@ -17,3 +17,8 @@ section {
   padding: 0;
   margin: 0;
 }
+@media (max-width: 800px) {
+  section {
+    width: 100%;
+  }
+}
