@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import * as Yup from 'yup'; // Import Yup for validation
+import { useFormik } from 'formik'; // Import Formik for form management
 import Button from '../button/Button';
 import './Form.scss';
 import emailjs from '@emailjs/browser';
@@ -6,31 +8,78 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
-  const form = useRef();
   const notify = (text) => toast(text);
-  const sendEmail = (e) => {
-    e.preventDefault();
 
-    emailjs.sendForm('service_akbv4fk', 'template_wro0dwt', form.current, 'jKZY1uQt3vUNxoL0Z')
+  // Define Yup validation schema
+  const validationSchema = Yup.object().shape({
+    user_name: Yup.string().required('Name is required'),
+    user_email: Yup.string().email('Invalid email').required('Email is required'),
+    message: Yup.string().required('Message is required'),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      user_name: '',
+      user_email: '',
+      message: '',
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      sendEmail(values);
+    },
+  });
+
+  const sendEmail = (values) => {
+    emailjs.sendForm('service_akbv4fk', 'template_wro0dwt', formik.values, 'jKZY1uQt3vUNxoL0Z')
       .then((result) => {
-        notify("Polina recieved your message!")
+        notify("Polina received your message!");
         console.log(result.text);
-        form.current.reset(); // Clear form fields
+        formik.resetForm(); // Clear form fields using Formik's method
       })
       .catch((error) => {
-        notify("Something went wrong...")
+        notify("Something went wrong...");
         console.log(error.text);
       });
   };
 
   return (
     <div className="formWrapper">
-      <form ref={form} className="sectionForm" onSubmit={sendEmail}>
+      <form className="sectionForm" onSubmit={formik.handleSubmit}>
         <label>Name</label>
-        <input type="text" name="user_name" />
+        <input
+          type="text"
+          name="user_name"
+          value={formik.values.user_name}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        />
+        {formik.touched.user_name && formik.errors.user_name ? (
+          <div className="error">{formik.errors.user_name}</div>
+        ) : null}
+
         <label>Email</label>
-        <input type="email" name="user_email" />
-        <textarea name="message" rows="5" cols="20" />
+        <input
+          type="email"
+          name="user_email"
+          value={formik.values.user_email}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        />
+        {formik.touched.user_email && formik.errors.user_email ? (
+          <div className="error">{formik.errors.user_email}</div>
+        ) : null}
+        <textarea
+          name="message"
+          rows="5"
+          cols="20"
+          value={formik.values.message}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        />
+        {formik.touched.message && formik.errors.message ? (
+          <div className="error">{formik.errors.message}</div>
+        ) : null}
+
         <Button name="Send" backgroundColor="#FFFFFF" type="submit">
           Send
         </Button>

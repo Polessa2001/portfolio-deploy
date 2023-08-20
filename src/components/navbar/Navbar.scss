@@ -82,6 +82,7 @@
     position: fixed;
     top: 0.5rem;
     right: 0.5rem;
+    z-index: 50;
   }
   .visible {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
