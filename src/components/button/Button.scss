@@ -18,6 +18,19 @@
 }
 @media (max-width: 800px){
   .button {
+    display: flex; /* Use flex display */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 80px;
+    width: 160px;
+    height: 40px;
+    background-color: brown;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.1s;
+    font-family: 'MuseoModerno';
     border: 2px solid black;
   }
 }
