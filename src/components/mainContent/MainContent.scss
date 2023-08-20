@@ -19,14 +19,14 @@ section {
 }
 @media (max-width: 800px) {
   .container {
-    height: 80vh;
+    height: calc(100vh - 84px);
     width: 100vw;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
   section {
-    height: 80vh;
+    height: calc(100vh - 84px);
     scroll-snap-align: start;
     display: flex;
     padding: 3rem;
