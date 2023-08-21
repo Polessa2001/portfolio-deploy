@@ -130,7 +130,7 @@ input:checked + .slider:before {
 }
 @media (max-width: 800px) {
   .section-3-back {
-    max-height: calc(100vh + 8rem);
+    min-height: 890px;
   }
   .section-3-content {
     display: flex;
