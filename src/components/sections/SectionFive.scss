@@ -33,9 +33,8 @@
 }
 @media (max-width: 800px)  {
   .section-5-content {
-  max-height: 105vh;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 33%;
     .contact-info {
       grid-row:1/2;
       text-align: center;
