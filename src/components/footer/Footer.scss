@@ -24,6 +24,11 @@
 }
 @media (max-width: 800px) {
   .footer {
+    position:unset;
+    grid-row: 3/end;
     bottom: 0rem;
+    a {
+      margin: 0 0.2rem;
+    }
   }
 }
