@@ -91,6 +91,10 @@
       font-size: 1rem !important;
       text-transform: capitalize !important;
     }
+    &::after {
+      content: '';
+      border-radius: 1rem;
+    }
   }
   .nextLink {
     width:2.5rem;

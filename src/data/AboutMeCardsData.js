@@ -7,9 +7,9 @@ const AboutMeCardsData = [
     id: 1,
     content: "My story as a developer began in 2018 when I decided to pursue a bachelor's degree in Engineering. " +
       "Ever since I have been interested in technologies and mathematics. It helped me formulate logical thinking" +
-      "and analysis. After completing university, I started learning coding " +
+      " and analysis. After completing university, I started learning coding " +
       "on my own. Later, my desire to enhance my skills motivated me to " +
-      "enroll in a Le Wagon bootcamp",
+      "enroll in Le Wagon bootcamp",
     img: aboutone
   },
   {
@@ -23,8 +23,7 @@ const AboutMeCardsData = [
     id: 3,
     content: "In addition to coding, I enjoy creating things, such as handmade crafts and drawing. I love sports, hiking, " +
       "and yoga. I relish exploring new things, " +
-      "acquiring knowledge and experiences, meeting new people, immersing myself in new cultures" +
-      "life has to offer. ",
+      "acquiring knowledge and experiences, meeting new people, immersing myself in new cultures",
     img: aboutthree
   }
 ];
