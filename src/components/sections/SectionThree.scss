@@ -150,7 +150,7 @@ input:checked + .slider:before {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-gap: 1rem;
+    grid-gap: 1rem 1rem !important;
     grid-template-columns: 1fr 1fr;
     max-height:100%;
     max-width: 100%;
