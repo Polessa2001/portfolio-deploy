@@ -3,7 +3,7 @@ import photome from '../../assets/photome.svg';
 import { TypeAnimation } from 'react-type-animation';
 import Button from '../button/Button';
 import './SectionOne.scss';
-import { lightGreen, blue } from '../../styles/colors';
+import { lightGreen, green } from '../../styles/colors';
 import CV from '../../assets/CV.pdf'
 const SectionOne = () => {
   return(
@@ -36,8 +36,8 @@ const SectionOne = () => {
         />
       </p>
       <div className="button-container">
-        <a href={CV}><Button name="Download CV" backgroundColor={lightGreen} /></a>
-        <a href = "#section-4"><Button name="View Portfolio" backgroundColor={blue} /></a>
+        <a href={CV}><Button name="Download CV" backgroundColor={lightGreen} type="button"/></a>
+        <a href = "#section-4"><Button name="View Portfolio" backgroundColor={green} type="button"/></a>
       </div>
     </div>
     </>

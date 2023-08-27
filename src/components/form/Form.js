@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import * as Yup from 'yup'; // Import Yup for validation
 import { useFormik } from 'formik'; // Import Formik for form management
 import Button from '../button/Button';
@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
   const notify = (text) => toast(text);
+  const form = useRef();
 
   // Define Yup validation schema
   const validationSchema = Yup.object().shape({
@@ -30,11 +31,11 @@ const Form = () => {
   });
 
   const sendEmail = (values) => {
-    emailjs.sendForm('service_akbv4fk', 'template_wro0dwt', formik.values, 'jKZY1uQt3vUNxoL0Z')
+    emailjs.sendForm('service_akbv4fk', 'template_wro0dwt', form.current, 'jKZY1uQt3vUNxoL0Z')
       .then((result) => {
         notify("Polina received your message!");
         console.log(result.text);
-        formik.resetForm(); // Clear form fields using Formik's method
+        formik.resetForm();
       })
       .catch((error) => {
         notify("Something went wrong...");
@@ -44,7 +45,7 @@ const Form = () => {
 
   return (
     <div className="formWrapper">
-      <form className="sectionForm" onSubmit={formik.handleSubmit}>
+      <form ref={form} className="sectionForm" onSubmit={formik.handleSubmit}>
         <label>Name</label>
         <input
           type="text"
