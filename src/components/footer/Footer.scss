@@ -26,8 +26,13 @@
   .footer {
     grid-row: 3/end;
     top:2rem;
+    height: auto;
     a {
       margin: 0 0.2rem;
+    }
+    p {
+      font-size: 0.75rem;
+      margin: 0;
     }
   }
 }
